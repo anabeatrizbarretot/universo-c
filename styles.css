@@ -1,0 +1,99 @@
+:root{
+  --bg:#0f172a;      /* fundo */
+  --panel:#111827;   /* cartões/sections */
+  --text:#e5e7eb;    /* texto principal */
+  --muted:#9ca3af;   /* texto secundário */
+  --brand:#22d3ee;   /* destaque */
+  --brand-2:#60a5fa; /* botão outline */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#0b1023,var(--bg));
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(15,23,42,.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand img{height:32px;width:auto}
+.menu a{
+  color:var(--text);text-decoration:none;margin-left:16px;opacity:.9
+}
+.menu a:hover{color:var(--brand)}
+
+/* Seções */
+.section{padding:56px 0}
+.section.alt{background:rgba(255,255,255,.03)}
+.section h2{margin-top:0;margin-bottom:16px;font-size:1.6rem}
+
+/* Hero */
+.hero{padding:72px 0 56px}
+.hero h1{font-size:2.2rem;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0 0 16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Botões */
+.btn{
+  display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;
+  text-decoration:none;background:var(--brand);color:#0b1023
+}
+.btn.outline{
+  background:transparent;color:var(--brand-2);border:1px solid var(--brand-2)
+}
+.btn:hover{filter:brightness(1.05)}
+
+/* Grid e cards */
+.grid{
+  display:grid;gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.card{
+  background:var(--panel);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:14px;padding:16px
+}
+.card h3{margin-top:0}
+
+/* Linha de botões em cards de módulos */
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+
+/* Time */
+.team{
+  display:grid;gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.person{
+  background:var(--panel);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:14px;padding:16px;text-align:center
+}
+.person img{
+  width:74px;height:74px;border-radius:999px;object-fit:cover;margin-bottom:8px
+}
+
+/* Footer */
+.footer{
+  border-top:1px solid rgba(255,255,255,.06);
+  color:var(--muted);padding:22px 0;margin-top:32px
+}
+
+/* Acessibilidade */
+a:focus{outline:2px solid var(--brand);outline-offset:2px}
+
+/* Responsivo */
+@media (max-width:520px){
+  .menu a{margin-left:10px}
+  .hero h1{font-size:1.8rem}
+}
