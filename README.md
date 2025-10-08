@@ -1,7 +1,5 @@
 ﻿# 🚀 Universo C
 
-![Banner do Universo C](https://via.placeholder.com/1100x300/121212/22d3ee?text=Universo+C)
-
 Um Recurso Educacional Aberto (REA) para o ensino de Fundamentos da Programação com a linguagem C, apresentado em um site moderno e interativo. 
 
 ---
@@ -65,7 +63,3 @@ Este projeto foi idealizado e desenvolvido por:
 
 ---
 
-## 📜 Licença
-
-
-Este projeto é um Recurso Educacional Aberto e está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
