@@ -1,145 +1,161 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Universo C — Fundamentos em C</title>
-  <meta name="description" content="Curso Universo C: vídeos e exercícios em PDF para aprender C." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo C — Fundamentos em C</title>
+    <meta name="description" content="Curso Universo C: vídeos e exercícios em PDF para aprender C.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="header">
-    <div class="container nav">
-      <div class="brand">
-        <img src="assets/img/logo.png" alt="Logo Universo C" />
-        <span>Universo C</span>
-      </div>
-      <nav class="menu">
-        <a href="#hero">Início</a>
-        <a href="#objetivos">Objetivos</a>
-        <a href="#modulos">Módulos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#time">Time</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="section hero">
-      <div class="container">
-        <h1>Universo C</h1>
-        <p>Aprenda Fundamentos de Programação em C com vídeos e exercícios práticos.</p>
-        <div class="actions">
-          <a class="btn" href="#modulos">Começar agora</a>
-          <a class="btn outline" href="pdfs/manual.pdf" target="_blank" rel="noopener">Manual (PDF)</a>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#inicio" class="brand">
+                    <img src="images/logo2.png" alt="Logo Universo C">
+                </a>
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#time">Time</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- OBJETIVOS -->
-    <section id="objetivos" class="section">
-      <div class="container">
-        <h2>Objetivos</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Aprender C do zero</h3>
-            <p>Entender a sintaxe, a estrutura de um programa e os tipos de dados.</p>
-          </article>
-          <article class="card">
-            <h3>Praticar lógica</h3>
-            <p>Exercícios progressivos com condicionais, laços e funções.</p>
-          </article>
-          <article class="card">
-            <h3>Aplicar na prática</h3>
-            <p>Listas em PDF e exemplos com foco em resolução de problemas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- MÓDULOS -->
-    <section id="modulos" class="section alt">
-      <div class="container">
-        <h2>Módulos</h2>
-        <div class="grid">
-          <!-- Módulo 1 -->
-          <article class="card">
-            <h3>Módulo 1 — Introdução a C</h3>
-            <p>História do C, pensamento computacional e primeiro programa.</p>
-            <div class="row">
-              <a class="btn" href="https://www.youtube.com/watch?v=XXXXXXXXXXX" target="_blank" rel="noopener">Assistir vídeo</a>
-              <a class="btn outline" href="pdfs/intro-exercicios.pdf" target="_blank" rel="noopener">Exercícios (PDF)</a>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Aprenda a programar em C do zero</h1>
+                <p>Uma jornada completa pelos fundamentos da programação.</p>
+                <a href="#modulos" class="btn">Começar agora</a>
             </div>
-          </article>
-          <!-- Módulo 2 -->
-          <article class="card">
-            <h3>Módulo 2 — Estrutura & Variáveis</h3>
-            <p>main(), variáveis, tipos e constantes.</p>
-            <div class="row">
-              <a class="btn" href="https://www.youtube.com/watch?v=YYYYYYYYYYY" target="_blank" rel="noopener">Assistir vídeo</a>
-              <a class="btn outline" href="pdfs/variaveis-exercicios.pdf" target="_blank" rel="noopener">Exercícios (PDF)</a>
+        </section>
+
+        <section id="sobre" class="section">
+            <div class="container section-layout">
+                <div class="section-text">
+                    <h2 class="section-title">Sobre o Projeto</h2>
+                    <p>
+                        O Universo C é um Recurso Educacional Aberto (REA) criado para a disciplina de Fundamentos da Programação. Nosso foco é tornar o aprendizado da linguagem C mais acessível, interativo e visual.
+                    </p>
+                    <p>
+                        Acreditamos que, com conteúdo objetivo e prática constante, qualquer pessoa pode dominar os pilares da programação e construir uma base sólida para uma carreira em tecnologia.
+                    </p>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Ilustração de código">
+                </div>
             </div>
-          </article>
-          <!-- Módulo 3 -->
-          <article class="card">
-            <h3>Módulo 3 — E/S & Operadores</h3>
-            <p>printf/scanf, operadores aritméticos, lógicos e relacionais.</p>
-            <div class="row">
-              <a class="btn" href="#" target="_blank" rel="noopener">Assistir vídeo</a>
-              <a class="btn outline" href="pdfs/es-operadores.pdf" target="_blank" rel="noopener">Exercícios (PDF)</a>
+        </section>
+
+        <section id="modulos" class="section alt">
+            <div class="container">
+                <h2 class="section-title">Módulos do Curso</h2>
+                <div class="modules-grid">
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Módulo 1: Introdução e Conceitos</h3>
+                        <p>Pensamento computacional, história da linguagem C e seu primeiro "Olá, Mundo!".</p>
+                    </div>
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Módulo 2: Variáveis e Estrutura</h3>
+                        <p>Sintaxe básica, tipos de dados, constantes e a estrutura principal de um programa.</p>
+                    </div>
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-right-left"></i></div>
+                        <h3>Módulo 3: Entradas, Saídas e Operadores</h3>
+                        <p>Interação com o usuário (printf/scanf) e operadores lógicos e aritméticos.</p>
+                    </div>
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h3>Módulo 4: Estruturas de Decisão</h3>
+                        <p>Controle o fluxo do seu código com as estruturas if, else e switch-case.</p>
+                    </div>
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-repeat"></i></div>
+                        <h3>Módulo 5: Estruturas de Repetição</h3>
+                        <p>Execute tarefas repetitivas de forma eficiente com os laços for, while e do-while.</p>
+                    </div>
+                    <div class="module-card">
+                        <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h3>Módulo 6: Dados e Funções</h3>
+                        <p>Vetores, matrizes, strings e a modularização do código com funções.</p>
+                    </div>
+                </div>
             </div>
-          </article>
+        </section>
 
-          <!-- Adicionar mais módulos conforme necessário -->
+        <section id="time" class="section">
+            <div class="container">
+                <h2 class="section-title">Nosso Time</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto de Ana Beatriz">
+                        <h3>Ana Beatriz Barreto</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto de Felipe Esteves">
+                        <h3>Felipe Esteves</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto de João Miguel Dias">
+                        <h3>João Miguel Dias</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://via.placeholder.com/150" alt="Foto de Gabriel Carvalho">
+                        <h3>Gabriel Carvalho</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section alt">
+             <div class="container contact-content">
+                <h2>Fale Conosco</h2>
+                <p>Dúvidas, sugestões ou feedbacks? Adoraríamos ouvir você.</p>
+                <a href="mailto:contato@universoc.example" class="btn">Enviar E-mail</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Universo C — Todos os direitos reservados.</p>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
-      <div class="container">
-        <h2>Sobre o Projeto</h2>
-        <p>O Universo C é um recurso educacional aberto (REA) para introdução à linguagem C,
-           com foco em conteúdo objetivo, prática e acessibilidade.</p>
-      </div>
-    </section>
+    <script>
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 
-    <!-- TIME -->
-    <section id="time" class="section alt">
-      <div class="container">
-        <h2>Time</h2>
-        <div class="team">
-          <article class="person">
-            <img src="assets/img/avatar1.png" alt="Foto de Gabriel" />
-            <h3>Gabriel</h3>
-            <p><a href="#" target="_blank" rel="noopener">LinkedIn</a> • <a href="#" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <article class="person">
-            <img src="assets/img/avatar2.png" alt="Foto de Felipe" />
-            <h3>Felipe</h3>
-            <p><a href="#" target="_blank" rel="noopener">LinkedIn</a> • <a href="#" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <!-- Adicionar mais pessoas -->
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section">
-      <div class="container">
-        <h2>Contato</h2>
-        <p>Dúvidas ou sugestões? Envie um e-mail: <a href="mailto:contato@universoc.example">contato@universoc.example</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Universo C — REA (Recurso Educacional Aberto).</p>
-    </div>
-  </footer>
 </body>
 </html>
