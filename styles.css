@@ -103,7 +103,7 @@ body {
 /* --- Seção Hero --- */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib.rb-4.0.3&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,6 +293,111 @@ body {
     font-size: 0.9rem;
     border-top: 1px solid var(--border-color);
 }
+
+/* --- Estilos do Modal --- */
+.open-modal-btn {
+    cursor: pointer; /* Indica que o card é clicável */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    z-index: 1000;
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Classe para ativar o modal via JS */
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* Largura máxima do modal */
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--brand-color);
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    color: var(--brand-color);
+    margin-bottom: 20px;
+}
+
+.modal-video-container {
+    margin-bottom: 20px;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.modal-video-container video {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+}
+
+.modal-content h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.modal-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Para telas menores */
+}
+
+.btn-recurso {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--brand-color);
+    color: var(--brand-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-recurso:hover {
+    background-color: var(--brand-color);
+    color: var(--bg-dark);
+}
+
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {
