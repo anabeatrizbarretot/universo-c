@@ -398,6 +398,38 @@ body {
     color: var(--bg-dark);
 }
 
+/* --- Estilos do Botão de Copiar E-mail (ADICIONADO) --- */
+#copy-email-btn {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none; 
+    padding-left: 30px; /* Mais espaço para o ícone */
+    padding-right: 30px;
+}
+
+#copy-email-btn i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 1.1rem;
+}
+
+.copy-success {
+    color: var(--brand-color);
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 0; /* Remove a margem de baixo do <p> */
+    
+    /* Começa escondido */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.copy-success.visible {
+    /* Classe para mostrar a mensagem */
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {

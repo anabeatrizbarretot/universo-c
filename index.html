@@ -59,20 +59,7 @@
                 <div class="modules-grid">
     
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 1: Introdução e Ambiente"
-                         data-video="videos/ide.mp4"
-                         data-pdf-presentation="#"
-                         data-pdf-list1="#"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
-                
-                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <h3>Módulo 1: Introdução e Ambiente</h3>
-                        <p>Conceitos iniciais, configuração do ambiente (IDE) e o primeiro "Olá, Mundo!".</p>
-                    </div>
-                
-                    <div class="module-card open-modal-btn" 
-                         data-title="Módulo 2: Fundamentos da Linguagem"
+                         data-title="Módulo 1: Fundamentos da Linguagem"
                          data-video="videos/Apresentacao.mp4"
                          data-pdf-presentation="pdfs/Apresentacao-Universo-C.pdf"
                          data-pdf-list1="#"
@@ -80,8 +67,21 @@
                          data-pdf-list3="#">
                 
                         <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                        <h3>Módulo 2: Fundamentos da Linguagem</h3>
+                        <h3>Módulo 1: Fundamentos da Linguagem</h3>
                         <p>Variáveis, tipos de dados, operadores e entrada/saída de informações (printf/scanf).</p>
+                    </div>
+                
+                    <div class="module-card open-modal-btn" 
+                         data-title="Módulo 2: Introdução e Ambiente"
+                         data-video="videos/ide.mp4"
+                         data-pdf-presentation="#"
+                         data-pdf-list1="#"
+                         data-pdf-list2="#"
+                         data-pdf-list3="#"> 
+                
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Módulo 2: Introdução e Ambiente</h3>
+                        <p>Conceitos iniciais, configuração do ambiente (IDE) e o primeiro "Olá, Mundo!".</p>
                     </div>
                 
                     <div class="module-card open-modal-btn" 
@@ -221,8 +221,16 @@
         <section id="contato" class="section alt">
              <div class="container contact-content">
                 <h2>Fale Conosco</h2>
-                <p>Dúvidas, sugestões ou feedbacks? Adoraríamos ouvir você.</p>
-                <a href="mailto:felipeestevesdepaula@gmail.com" class="btn">Enviar E-mail</a>
+                <p>Dúvidas ou sugestões? Clique no botão abaixo para copiar nosso e-mail.</p>
+                
+                <button id="copy-email-btn" class="btn">
+                    <i class="fa-solid fa-copy"></i> felipeestevesdepaula@gmail.com
+                </button>
+                
+                <p id="copy-success-msg" class="copy-success">
+                    E-mail copiado para a área de transferência!
+                </p>
+
             </div>
         </section>
 
@@ -276,28 +284,23 @@
         });
 
         // ==============================================
-        // LÓGICA DO MODAL (ATUALIZADO 28/10)
+        // LÓGICA DO MODAL
         // ==============================================
         document.addEventListener('DOMContentLoaded', () => {
 
-            // Seleciona todos os elementos necessários
+            // --- Lógica do Modal ---
             const modalTriggers = document.querySelectorAll('.open-modal-btn');
             const modalOverlay = document.getElementById('modal-overlay');
             const modalCloseBtn = document.getElementById('modal-close');
             const modalTitle = document.getElementById('modal-title');
             const modalVideo = document.getElementById('modal-video');
-            
-            // Novos seletores para os 4 botões
             const modalPdfPresentation = document.getElementById('modal-pdf-presentation');
             const modalPdfList1 = document.getElementById('modal-pdf-list1');
             const modalPdfList2 = document.getElementById('modal-pdf-list2');
             const modalPdfList3 = document.getElementById('modal-pdf-list3');
 
-            // Função para abrir o modal
             const openModal = (e) => {
                 const triggerCard = e.currentTarget;
-
-                // Pega os dados dos atributos data-*
                 const title = triggerCard.dataset.title;
                 const videoSrc = triggerCard.dataset.video;
                 const pdfPresentationSrc = triggerCard.dataset.pdfPresentation;
@@ -305,10 +308,8 @@
                 const pdfList2Src = triggerCard.dataset.pdfList2;
                 const pdfList3Src = triggerCard.dataset.pdfList3;
 
-                // Popula o modal com os dados
                 modalTitle.textContent = title;
                 
-                // --- Lógica para esconder/mostrar vídeo ---
                 if (videoSrc && videoSrc !== "#") {
                     modalVideo.querySelector('source').src = videoSrc;
                     modalVideo.load();
@@ -317,9 +318,6 @@
                     modalVideo.parentElement.style.display = 'none';
                 }
                 
-                // --- Lógica para esconder/mostrar os 4 botões ---
-                
-                // Botão Apresentação
                 if (pdfPresentationSrc && pdfPresentationSrc !== "#") {
                     modalPdfPresentation.href = pdfPresentationSrc;
                     modalPdfPresentation.style.display = 'inline-flex';
@@ -327,7 +325,6 @@
                     modalPdfPresentation.style.display = 'none';
                 }
 
-                // Botão Lista 1
                 if (pdfList1Src && pdfList1Src !== "#") {
                     modalPdfList1.href = pdfList1Src;
                     modalPdfList1.style.display = 'inline-flex';
@@ -335,7 +332,6 @@
                     modalPdfList1.style.display = 'none';
                 }
                 
-                // Botão Lista 2
                 if (pdfList2Src && pdfList2Src !== "#") {
                     modalPdfList2.href = pdfList2Src;
                     modalPdfList2.style.display = 'inline-flex';
@@ -343,7 +339,6 @@
                     modalPdfList2.style.display = 'none';
                 }
                 
-                // Botão Lista 3
                 if (pdfList3Src && pdfList3Src !== "#") {
                     modalPdfList3.href = pdfList3Src;
                     modalPdfList3.style.display = 'inline-flex';
@@ -351,11 +346,9 @@
                     modalPdfList3.style.display = 'none';
                 }
                 
-                // Exibe o modal
                 modalOverlay.classList.add('active');
             };
 
-            // Função para fechar o modal
             const closeModal = () => {
                 modalOverlay.classList.remove('active');
                 modalVideo.pause();
@@ -363,18 +356,60 @@
                 modalVideo.querySelector('source').src = "";
             };
 
-            // Adiciona os eventos de clique
             modalTriggers.forEach(trigger => {
                 trigger.addEventListener('click', openModal);
             });
 
-            modalCloseBtn.addEventListener('click', closeModal);
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeModal);
+            }
+            
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', (e) => {
+                    if (e.target === modalOverlay) {
+                        closeModal();
+                    }
+                });
+            }
 
-            modalOverlay.addEventListener('click', (e) => {
-                if (e.target === modalOverlay) {
-                    closeModal();
-                }
-            });
+            // ==============================================
+            // LÓGICA DE COPIAR E-MAIL (ADICIONADA)
+            // ==============================================
+            const copyBtn = document.getElementById('copy-email-btn');
+            const copySuccessMsg = document.getElementById('copy-success-msg');
+            const emailToCopy = 'felipeestevesdepaula@gmail.com';
+
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    // Tenta copiar o e-mail
+                    navigator.clipboard.writeText(emailToCopy).then(() => {
+                        // Sucesso!
+                        copySuccessMsg.classList.add('visible');
+                        copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+                        
+                        // Reseta o botão e a mensagem depois de 3 segundos
+                        setTimeout(() => {
+                            copySuccessMsg.classList.remove('visible');
+                            copyBtn.innerHTML = '<i class="fa-solid fa-copy"></i> felipeestevesdepaula@gmail.com';
+                        }, 3000);
+                        
+                    }).catch(err => {
+                        // Erro (raro, mas pode acontecer)
+                        console.error('Falha ao copiar e-mail: ', err);
+                        copySuccessMsg.textContent = 'Erro ao copiar. Use Ctrl+C.';
+                        copySuccessMsg.classList.add('visible');
+                        
+                        // Reseta em caso de erro
+                        setTimeout(() => {
+                            copySuccessMsg.classList.remove('visible');
+                            copySuccessMsg.textContent = 'E-mail copiado para a área de transferência!';
+                        }, 5000);
+                    });
+                });
+            }
+            // ==============================================
+            // FIM DA LÓGICA DE COPIAR E-MAIL
+            // ==============================================
 
         });
     </script>
